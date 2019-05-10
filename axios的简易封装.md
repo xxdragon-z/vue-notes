@@ -1,4 +1,5 @@
 # axios封装
+* 使用axios,你需要npm install axios
 * 设置axios的各种属性
 <pre><code>
 import axios from 'axios'
@@ -8,7 +9,7 @@ axios.defaults.withCredentials = true
 axios.defaults.baseURL=''
 </code></pre>
 * 分装请求类型
-<code>
+<pre><code>
 export const getRequest = (url) => {
   console.info(url)
     return axios.get(url).then(result => result.data)
@@ -29,4 +30,4 @@ export const POST = (url, params) => {
   console.info(url + '++++++++' + params)
   return axios.post(url, params).then(res => res.data)
 }
-</code>
+</code></pre>
