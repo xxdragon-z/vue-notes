@@ -1,5 +1,5 @@
 # axios封装
-* ## 使用axios,你需要npm install axios
+* ### 使用axios,你需要npm install axios
 * ### 设置axios的各种属性
 <pre><code>
 import axios from 'axios'
