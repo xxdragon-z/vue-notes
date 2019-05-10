@@ -1,6 +1,6 @@
 # axios封装
-* 使用axios,你需要npm install axios
-* 设置axios的各种属性
+* ## 使用axios,你需要npm install axios
+* ### 设置axios的各种属性
 <pre><code>
 import axios from 'axios'
 //设置跨域
@@ -8,7 +8,7 @@ axios.defaults.withCredentials = true
 //设置默认的请求地址
 axios.defaults.baseURL=''
 </code></pre>
-* 分装请求类型
+* ### 分装请求类型
 <pre><code>
 export const getRequest = (url) => {
   console.info(url)
