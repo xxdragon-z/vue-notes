@@ -1,13 +1,13 @@
-#axios封装
+# axios封装
 * 设置axios的各种属性
-'
+<pre><code>
 import axios from 'axios'
 //设置跨域
 axios.defaults.withCredentials = true
 //设置默认的请求地址
 axios.defaults.baseURL=''
-'
-*分装请求类型
+</code></pre>
+* 分装请求类型
 '
 export const getRequest = (url) => {
   console.info(url)
