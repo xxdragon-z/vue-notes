@@ -10,9 +10,9 @@ axios.defaults.baseURL=''
 </code></pre>
 * ### 分装请求类型
 <pre><code>
-export const getRequest = (url,type='get') => {
+export const getRequest = (url) => {
   console.info(url)
-    return axios[type](url).then(result => result.data)
+    return axios.get(url).then(result => result.data)
 }
 
 export const PUT = (url, params) => {
