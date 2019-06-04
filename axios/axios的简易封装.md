@@ -10,10 +10,10 @@ axios.defaults.baseURL=''
 </code></pre>
 * ### 分装请求类型
 <pre><code>
-export const getRequest = (url) => {
+export const getRequest = (url,type='get') => {
   console.info(url)
-    return axios.get(url).then(result => result.data)
-  }
+    return axios[type](url).then(result => result.data)
+}
 
 export const PUT = (url, params) => {
   return axios.put(url, params).then(res => res.data)
@@ -31,3 +31,18 @@ export const POST = (url, params) => {
   return axios.post(url, params).then(res => res.data)
 }
 </code></pre>
+* ### axios 多个并发请求
+```
+function getUserAccount() {
+  return axios.get('/user/12345');
+}
+
+function getUserPermissions() {
+  return axios.get('/user/12345/permissions');
+}
+
+axios.all([getUserAccount(), getUserPermissions()])
+  .then(axios.spread(function (acct, perms) {
+    // 两个请求现在都执行完成
+  }));
+```
